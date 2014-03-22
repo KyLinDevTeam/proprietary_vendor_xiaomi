@@ -19,9 +19,7 @@ PRODUCT_COPY_FILES += \
 	vendor/xiaomi/mione_plus/proprietary/lib/libacdbloader.so:obj/lib/libacdbloader.so \
 	vendor/xiaomi/mione_plus/proprietary/lib/libacdbmapper.so:obj/lib/libacdbmapper.so \
 	vendor/xiaomi/mione_plus/proprietary/lib/libaudioalsa.so:obj/lib/libaudioalsa.so \
-	vendor/xiaomi/mione_plus/proprietary/lib/libv8.so:obj/lib/libv8.so \
-	vendor/xiaomi/mione_plus/proprietary/lib/libnv.so:obj/lib/libnv.so \
-	vendor/xiaomi/mione_plus/proprietary/lib/liboncrpc.so:obj/lib/liboncrpc.so \
+	vendor/xiaomi/mione_plus/proprietary/lib/libv8.so:obj/lib/libv8.so
 
 PRODUCT_COPY_FILES += \
   vendor/xiaomi/mione_plus/proprietary/lib/libacdbloader.so:system/lib/libacdbloader.so \
@@ -52,17 +50,18 @@ PRODUCT_COPY_FILES += \
   vendor/xiaomi/mione_plus/proprietary/etc/firmware/dsps_fluid.b02:system/etc/firmware/dsps_fluid.b02 \
   vendor/xiaomi/mione_plus/proprietary/etc/firmware/dsps_fluid.b01:system/etc/firmware/dsps_fluid.b01 \
   vendor/xiaomi/mione_plus/proprietary/etc/firmware/dsps_fluid.b00:system/etc/firmware/dsps_fluid.b00 \
-  vendor/xiaomi/mione_plus/proprietary/etc/firmware/bcmdhd.cal:system/etc/firmware/bcmdhd.cal \
   vendor/xiaomi/mione_plus/proprietary/etc/firmware/fw_bcm4329.bin:system/etc/firmware/fw_bcm4329.bin \
   vendor/xiaomi/mione_plus/proprietary/etc/firmware/fw_bcm4329_apsta.bin:system/etc/firmware/fw_bcm4329_apsta.bin \
   vendor/xiaomi/mione_plus/proprietary/etc/firmware/fw_bcmdhd.bin:system/etc/firmware/fw_bcmdhd.bin \
   vendor/xiaomi/mione_plus/proprietary/etc/firmware/fw_bcmdhd_apsta.bin:system/etc/firmware/fw_bcmdhd_apsta.bin \
   vendor/xiaomi/mione_plus/proprietary/etc/firmware/fw_bcmdhd_p2p.bin:system/etc/firmware/fw_bcmdhd_p2p.bin \
+  vendor/xiaomi/mione_plus/proprietary/etc/firmware/bcmdhd.cal:system/etc/firmware/bcmdhd.cal \
   vendor/xiaomi/mione_plus/proprietary/etc/firmware/nvram.txt:system/etc/firmware/nvram.txt \
   vendor/xiaomi/mione_plus/proprietary/lib/libnv.so:system/lib/libnv.so \
   vendor/xiaomi/mione_plus/proprietary/etc/firmware/bcm4329.hcd:system/etc/firmware/bcm4329.hcd \
   vendor/xiaomi/mione_plus/proprietary/etc/firmware/bcm4330.hcd:system/etc/firmware/bcm4330.hcd \
   vendor/xiaomi/mione_plus/proprietary/etc/init.qcom.modem_links.sh:system/etc/init.qcom.modem_links.sh \
+  vendor/xiaomi/mione_plus/proprietary/etc/init.qcom.post_fs.sh:system/etc/init.qcom.post_fs.sh \
   vendor/xiaomi/mione_plus/proprietary/lib/libdsm.so:system/lib/libdsm.so \
   vendor/xiaomi/mione_plus/proprietary/lib/liboncrpc.so:system/lib/liboncrpc.so \
   vendor/xiaomi/mione_plus/proprietary/lib/libqueue.so:system/lib/libqueue.so \
@@ -90,6 +89,21 @@ PRODUCT_COPY_FILES += \
   vendor/xiaomi/mione_plus/proprietary/lib/libmmjpeg.so:system/lib/libmmjpeg.so \
   vendor/xiaomi/mione_plus/proprietary/lib/libmmmpo.so:system/lib/libmmmpo.so \
   vendor/xiaomi/mione_plus/proprietary/lib/libmmstereo.so:system/lib/libmmstereo.so \
+  vendor/xiaomi/mione_plus/proprietary/lib/libmmmpod.so:system/lib/libmmmpod.so \
+  vendor/xiaomi/mione_plus/proprietary/lib/libmmrtpdecoder.so:system/lib/libmmrtpdecoder.so \
+  vendor/xiaomi/mione_plus/proprietary/lib/libmmjps.so:system/lib/libmmjps.so \
+  vendor/xiaomi/mione_plus/proprietary/lib/libmm-color-convertor.so:system/lib/libmm-color-convertor.so \
+  vendor/xiaomi/mione_plus/proprietary/lib/libimage-omx-common.so:system/lib/libimage-omx-common.so \
+  vendor/xiaomi/mione_plus/proprietary/lib/libimage-jpeg-enc-omx-comp.so:system/lib/libimage-jpeg-enc-omx-comp.so \
+  vendor/xiaomi/mione_plus/proprietary/lib/libimage-jpeg-dec-omx-comp.so:system/lib/libimage-jpeg-dec-omx-comp.so \
+  vendor/xiaomi/mione_plus/proprietary/lib/libmmcamera_faceproc.so:system/lib/libmmcamera_faceproc.so \
+  vendor/xiaomi/mione_plus/proprietary/lib/libmmcamera_frameproc.so:system/lib/libmmcamera_frameproc.so \
+  vendor/xiaomi/mione_plus/proprietary/lib/libmmcamera_hdr_lib.so:system/lib/libmmcamera_hdr_lib.so \
+  vendor/xiaomi/mione_plus/proprietary/lib/libmmcamera_image_stab.so:system/lib/libmmcamera_image_stab.so \
+  vendor/xiaomi/mione_plus/proprietary/lib/libmmcamera_interface2.so:system/lib/libmmcamera_interface2.so \
+  vendor/xiaomi/mione_plus/proprietary/lib/libmmcamera_statsproc31.so:system/lib/libmmcamera_statsproc31.so \
+  vendor/xiaomi/mione_plus/proprietary/lib/libmmcamera_wavelet_lib.so:system/lib/libmmcamera_wavelet_lib.so \
+  vendor/xiaomi/mione_plus/proprietary/lib/libmmstillomx.so:system/lib/libmmstillomx.so \
   vendor/xiaomi/mione_plus/proprietary/bin/gpsone_daemon:system/bin/gpsone_daemon \
   vendor/xiaomi/mione_plus/proprietary/lib/libgpsone_bit_api.so:system/lib/libgpsone_bit_api.so \
   vendor/xiaomi/mione_plus/proprietary/lib/libgps.utils.so:system/lib/libgps.utils.so \
@@ -103,83 +117,71 @@ PRODUCT_COPY_FILES += \
   vendor/xiaomi/mione_plus/proprietary/bin/mm-pp-daemon:system/bin/mm-pp-daemon \
   vendor/xiaomi/mione_plus/proprietary/lib/libmm-abl-oem.so:system/lib/libmm-abl-oem.so \
   vendor/xiaomi/mione_plus/proprietary/lib/libmm-abl.so:system/lib/libmm-abl.so \
-  vendor/xiaomi/mione_plus/proprietary/bin/bridgemgrd:system/bin/bridgemgrd \
-  vendor/xiaomi/mione_plus/proprietary/bin/dun-server:system/bin/dun-server \
   vendor/xiaomi/mione_plus/proprietary/bin/port-bridge:system/bin/port-bridge \
+  vendor/xiaomi/mione_plus/proprietary/bin/bridgemgrd:system/bin/bridgemgrd \
   vendor/xiaomi/mione_plus/proprietary/bin/qmuxd:system/bin/qmuxd \
   vendor/xiaomi/mione_plus/proprietary/bin/rmt_storage:system/bin/rmt_storage \
   vendor/xiaomi/mione_plus/proprietary/bin/usbhub:system/bin/usbhub \
   vendor/xiaomi/mione_plus/proprietary/bin/usbhub_init:system/bin/usbhub_init \
+  vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_imx074_default_video.so:system/lib/libchromatix_imx074_default_video.so \
+  vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_imx074_preview.so:system/lib/libchromatix_imx074_preview.so \
+  vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_imx074_video_hd.so:system/lib/libchromatix_imx074_video_hd.so \
+  vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_imx074_zsl.so:system/lib/libchromatix_imx074_zsl.so \
+  vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_imx091_default_video.so:system/lib/libchromatix_imx091_default_video.so \
+  vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_imx091_preview.so:system/lib/libchromatix_imx091_preview.so \
+  vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_imx091_video_hd.so:system/lib/libchromatix_imx091_video_hd.so \
+  vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_imx105_default_video.so:system/lib/libchromatix_imx105_default_video.so \
+  vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_imx105_preview.so:system/lib/libchromatix_imx105_preview.so \
+  vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_imx105_zsl.so:system/lib/libchromatix_imx105_zsl.so \
+  vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_imx105p_default_video.so:system/lib/libchromatix_imx105p_default_video.so \
+  vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_imx105p_preview.so:system/lib/libchromatix_imx105p_preview.so \
+  vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_imx105p_zsl.so:system/lib/libchromatix_imx105p_zsl.so \
+  vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_imx105s_default_video.so:system/lib/libchromatix_imx105s_default_video.so \
+  vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_imx105s_preview.so:system/lib/libchromatix_imx105s_preview.so \
+  vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_imx105s_zsl.so:system/lib/libchromatix_imx105s_zsl.so \
+  vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_imx132_default_video.so:system/lib/libchromatix_imx132_default_video.so \
+  vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_imx132_preview.so:system/lib/libchromatix_imx132_preview.so \
+  vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_imx132_zsl.so:system/lib/libchromatix_imx132_zsl.so \
+  vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_mt9e0132_default_video.so:system/lib/libchromatix_mt9e0132_default_video.so \
+  vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_mt9e0132_preview.so:system/lib/libchromatix_mt9e0132_preview.so \
+  vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_mt9e0133_default_video.so:system/lib/libchromatix_mt9e0133_default_video.so \
+  vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_mt9e0133_preview.so:system/lib/libchromatix_mt9e0133_preview.so \
+  vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_mt9e0134_default_video.so:system/lib/libchromatix_mt9e0134_default_video.so \
+  vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_mt9e0134_preview.so:system/lib/libchromatix_mt9e0134_preview.so \
+  vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_mt9e013_default_video.so:system/lib/libchromatix_mt9e013_default_video.so \
+  vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_mt9e013_preview.so:system/lib/libchromatix_mt9e013_preview.so \
+  vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_mt9e013_video_hfr.so:system/lib/libchromatix_mt9e013_video_hfr.so \
+  vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_ov2720_default_video.so:system/lib/libchromatix_ov2720_default_video.so \
+  vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_ov2720_hfr.so:system/lib/libchromatix_ov2720_hfr.so \
+  vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_ov2720_preview.so:system/lib/libchromatix_ov2720_preview.so \
+  vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_ov2720_zsl.so:system/lib/libchromatix_ov2720_zsl.so \
+  vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_ov5647_default_video.so:system/lib/libchromatix_ov5647_default_video.so \
+  vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_ov5647_preview.so:system/lib/libchromatix_ov5647_preview.so \
+  vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_ov5647_video_hfr.so:system/lib/libchromatix_ov5647_video_hfr.so \
+  vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_ov8825_default_video.so:system/lib/libchromatix_ov8825_default_video.so \
+  vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_ov8825_preview.so:system/lib/libchromatix_ov8825_preview.so \
+  vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_ov9726_default_video.so:system/lib/libchromatix_ov9726_default_video.so \
+  vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_ov9726_preview.so:system/lib/libchromatix_ov9726_preview.so \
+  vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_s5k3h2_default_video.so:system/lib/libchromatix_s5k3h2_default_video.so \
+  vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_s5k3h2_preview.so:system/lib/libchromatix_s5k3h2_preview.so \
+  vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_s5k3h2_zsl.so:system/lib/libchromatix_s5k3h2_zsl.so \
+  vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_s5k3h2s_default_video.so:system/lib/libchromatix_s5k3h2s_default_video.so \
+  vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_s5k3h2s_preview.so:system/lib/libchromatix_s5k3h2s_preview.so \
+  vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_s5k3h2s_zsl.so:system/lib/libchromatix_s5k3h2s_zsl.so \
+  vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_s5k3l1yx_default_video.so:system/lib/libchromatix_s5k3l1yx_default_video.so \
+  vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_s5k3l1yx_hfr_120fps.so:system/lib/libchromatix_s5k3l1yx_hfr_120fps.so \
+  vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_s5k3l1yx_hfr_60fps.so:system/lib/libchromatix_s5k3l1yx_hfr_60fps.so \
+  vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_s5k3l1yx_hfr_90fps.so:system/lib/libchromatix_s5k3l1yx_hfr_90fps.so \
+  vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_s5k3l1yx_preview.so:system/lib/libchromatix_s5k3l1yx_preview.so \
+  vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_s5k3l1yx_video_hd.so:system/lib/libchromatix_s5k3l1yx_video_hd.so \
+  vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_s5k3l1yx_zsl.so:system/lib/libchromatix_s5k3l1yx_zsl.so \
+  vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_s5k4e1_default_video.so:system/lib/libchromatix_s5k4e1_default_video.so \
+  vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_s5k4e1_preview.so:system/lib/libchromatix_s5k4e1_preview.so \
   vendor/xiaomi/mione_plus/proprietary/usr/keylayout/8660_handset.kl:system/usr/keylayout/8660_handset.kl \
+  vendor/xiaomi/mione_plus/proprietary/usr/keylayout/cyttsp-i2c.kl:system/usr/keylayout/cyttsp-i2c.kl \
+  vendor/xiaomi/mione_plus/proprietary/usr/keylayout/ffa-keypad.kl:system/usr/keylayout/ffa-keypad.kl \
+  vendor/xiaomi/mione_plus/proprietary/usr/keylayout/fluid-keypad.kl:system/usr/keylayout/fluid-keypad.kl \
   vendor/xiaomi/mione_plus/proprietary/usr/keylayout/mione-keypad.kl:system/usr/keylayout/mione-keypad.kl \
   vendor/xiaomi/mione_plus/proprietary/lib/libmmparser.so:system/lib/libmmparser.so \
   vendor/xiaomi/mione_plus/proprietary/lib/libmmosal.so:system/lib/libmmosal.so \
-  vendor/xiaomi/mione_plus/proprietary/lib/libDivxDrm.so:system/lib/libDivxDrm.so \
-  vendor/xiaomi/mione_plus/proprietary/lib/libmmstillomx.so:system/lib/libmmstillomx.so \
-  vendor/xiaomi/mione_plus/proprietary/lib/libimage-jpeg-dec-omx-comp.so:system/lib/libimage-jpeg-dec-omx-comp.so \
-  vendor/xiaomi/mione_plus/proprietary/lib/libimage-jpeg-enc-omx-comp.so:system/lib/libimage-jpeg-enc-omx-comp.so \
-  vendor/xiaomi/mione_plus/proprietary/lib/libimage-omx-common.so:system/lib/libimage-omx-common.so \
-  vendor/xiaomi/mione_plus/proprietary/lib/libmmcamera_faceproc.so:system/lib/libmmcamera_faceproc.so \
-  vendor/xiaomi/mione_plus/proprietary/lib/libmmcamera_frameproc.so:system/lib/libmmcamera_frameproc.so \
-  vendor/xiaomi/mione_plus/proprietary/lib/libmmcamera_hdr_lib.so:system/lib/libmmcamera_hdr_lib.so \
-  vendor/xiaomi/mione_plus/proprietary/lib/libmmcamera_image_stab.so:system/lib/libmmcamera_image_stab.so \
-  vendor/xiaomi/mione_plus/proprietary/lib/libmmcamera_interface2.so:system/lib/libmmcamera_interface2.so \
-  vendor/xiaomi/mione_plus/proprietary/lib/libmmcamera_statsproc31.so:system/lib/libmmcamera_statsproc31.so \
-  vendor/xiaomi/mione_plus/proprietary/lib/libmmcamera_wavelet_lib.so:system/lib/libmmcamera_wavelet_lib.so
-
-
-PRODUCT_COPY_FILES += \
-    vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_imx074_default_video.so:system/lib/libchromatix_imx074_default_video.so \
-    vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_imx074_preview.so:system/lib/libchromatix_imx074_preview.so \
-    vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_imx074_video_hd.so:system/lib/libchromatix_imx074_video_hd.so \
-    vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_imx074_zsl.so:system/lib/libchromatix_imx074_zsl.so \
-    vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_imx091_default_video.so:system/lib/libchromatix_imx091_default_video.so \
-    vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_imx091_preview.so:system/lib/libchromatix_imx091_preview.so \
-    vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_imx091_video_hd.so:system/lib/libchromatix_imx091_video_hd.so \
-    vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_imx105_default_video.so:system/lib/libchromatix_imx105_default_video.so \
-    vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_imx105p_default_video.so:system/lib/libchromatix_imx105p_default_video.so \
-    vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_imx105p_preview.so:system/lib/libchromatix_imx105p_preview.so \
-    vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_imx105_preview.so:system/lib/libchromatix_imx105_preview.so \
-    vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_imx105p_zsl.so:system/lib/libchromatix_imx105p_zsl.so \
-    vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_imx105s_default_video.so:system/lib/libchromatix_imx105s_default_video.so \
-    vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_imx105s_preview.so:system/lib/libchromatix_imx105s_preview.so \
-    vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_imx105s_zsl.so:system/lib/libchromatix_imx105s_zsl.so \
-    vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_imx105_zsl.so:system/lib/libchromatix_imx105_zsl.so \
-    vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_imx132_default_video.so:system/lib/libchromatix_imx132_default_video.so \
-    vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_imx132_preview.so:system/lib/libchromatix_imx132_preview.so \
-    vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_imx132_zsl.so:system/lib/libchromatix_imx132_zsl.so \
-    vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_mt9e0132_default_video.so:system/lib/libchromatix_mt9e0132_default_video.so \
-    vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_mt9e0132_preview.so:system/lib/libchromatix_mt9e0132_preview.so \
-    vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_mt9e0133_default_video.so:system/lib/libchromatix_mt9e0133_default_video.so \
-    vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_mt9e0133_preview.so:system/lib/libchromatix_mt9e0133_preview.so \
-    vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_mt9e0134_default_video.so:system/lib/libchromatix_mt9e0134_default_video.so \
-    vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_mt9e0134_preview.so:system/lib/libchromatix_mt9e0134_preview.so \
-    vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_mt9e013_default_video.so:system/lib/libchromatix_mt9e013_default_video.so \
-    vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_mt9e013_preview.so:system/lib/libchromatix_mt9e013_preview.so \
-    vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_mt9e013_video_hfr.so:system/lib/libchromatix_mt9e013_video_hfr.so \
-    vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_ov2720_default_video.so:system/lib/libchromatix_ov2720_default_video.so \
-    vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_ov2720_hfr.so:system/lib/libchromatix_ov2720_hfr.so \
-    vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_ov2720_preview.so:system/lib/libchromatix_ov2720_preview.so \
-    vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_ov2720_zsl.so:system/lib/libchromatix_ov2720_zsl.so \
-    vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_ov5647_default_video.so:system/lib/libchromatix_ov5647_default_video.so \
-    vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_ov5647_preview.so:system/lib/libchromatix_ov5647_preview.so \
-    vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_ov5647_video_hfr.so:system/lib/libchromatix_ov5647_video_hfr.so \
-    vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_ov8825_default_video.so:system/lib/libchromatix_ov8825_default_video.so \
-    vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_ov8825_preview.so:system/lib/libchromatix_ov8825_preview.so \
-    vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_ov9726_default_video.so:system/lib/libchromatix_ov9726_default_video.so \
-    vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_ov9726_preview.so:system/lib/libchromatix_ov9726_preview.so \
-    vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_s5k3h2_default_video.so:system/lib/libchromatix_s5k3h2_default_video.so \
-    vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_s5k3h2_preview.so:system/lib/libchromatix_s5k3h2_preview.so \
-    vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_s5k3h2s_default_video.so:system/lib/libchromatix_s5k3h2s_default_video.so \
-    vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_s5k3h2s_preview.so:system/lib/libchromatix_s5k3h2s_preview.so \
-    vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_s5k3h2s_zsl.so:system/lib/libchromatix_s5k3h2s_zsl.so \
-    vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_s5k3h2_zsl.so:system/lib/libchromatix_s5k3h2_zsl.so \
-    vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_s5k3l1yx_default_video.so:system/lib/libchromatix_s5k3l1yx_default_video.so \
-    vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_s5k3l1yx_hfr_120fps.so:system/lib/libchromatix_s5k3l1yx_hfr_120fps.so \
-    vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_s5k3l1yx_hfr_60fps.so:system/lib/libchromatix_s5k3l1yx_hfr_60fps.so \
-    vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_s5k3l1yx_hfr_90fps.so:system/lib/libchromatix_s5k3l1yx_hfr_90fps.so \
-    vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_s5k3l1yx_preview.so:system/lib/libchromatix_s5k3l1yx_preview.so \
-    vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_s5k3l1yx_video_hd.so:system/lib/libchromatix_s5k3l1yx_video_hd.so \
-    vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_s5k3l1yx_zsl.so:system/lib/libchromatix_s5k3l1yx_zsl.so \
-    vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_s5k4e1_default_video.so:system/lib/libchromatix_s5k4e1_default_video.so \
-    vendor/xiaomi/mione_plus/proprietary/lib/libchromatix_s5k4e1_preview.so:system/lib/libchromatix_s5k4e1_preview.so
+  vendor/xiaomi/mione_plus/proprietary/lib/libDivxDrm.so:system/lib/libDivxDrm.so

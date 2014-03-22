@@ -1,4 +1,5 @@
-# Copyright (c) 2009, Code Aurora Forum. All rights reserved.
+#!/system/bin/sh
+# Copyright (c) 2012, Code Aurora Forum. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are met:
@@ -24,8 +25,24 @@
 # OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
-# key 164, 168, 208 are for 8660 V2
-key 226   HEADSETHOOK       WAKE
-key 164   HEADSETHOOK       WAKE
-key 168   MEDIA_PREVIOUS    WAKE
-key 208   MEDIA_NEXT        WAKE
+
+# This should be the first command
+# remount system as read-write.
+mount -o rw,remount,barrier=1 /system
+
+# Run modem link script
+/system/bin/sh /system/etc/init.qcom.modem_links.sh
+
+# Run mdm link script
+/system/bin/sh /system/etc/init.qcom.mdm_links.sh
+
+# Run thermal script
+/system/bin/sh /system/etc/init.qcom.thermald_conf.sh
+
+# Run wifi script
+/system/bin/sh /system/etc/init.qcom.wifi.sh
+
+# This should be the last command
+# remount system as read-only.
+mount -o ro,remount,barrier=1 /system
+
