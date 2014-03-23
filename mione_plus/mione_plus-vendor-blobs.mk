@@ -19,6 +19,8 @@ PRODUCT_COPY_FILES += \
 	vendor/xiaomi/mione_plus/proprietary/lib/libacdbloader.so:obj/lib/libacdbloader.so \
 	vendor/xiaomi/mione_plus/proprietary/lib/libacdbmapper.so:obj/lib/libacdbmapper.so \
 	vendor/xiaomi/mione_plus/proprietary/lib/libaudioalsa.so:obj/lib/libaudioalsa.so \
+	vendor/xiaomi/mione_plus/proprietary/lib/libnv.so:obj/lib/libnv.so \
+	vendor/xiaomi/mione_plus/proprietary/lib/liboncrpc.so:obj/lib/liboncrpc.so \
 	vendor/xiaomi/mione_plus/proprietary/lib/libv8.so:obj/lib/libv8.so
 
 PRODUCT_COPY_FILES += \
